@@ -1,153 +1,221 @@
 import * as KeyCode from "keycode-js";
 // https://www.npmjs.com/package/keycode-js
 
+const stringify = input => input.toString()
+
+const numberPayload = (num) => {
+  return [{ charType: "NUMERIC", actionType: "INPUT" }, stringify(num)]
+}
+const mathPayload = (op) => {
+  return [{ charType: "MATH_OP", actionType: "INPUT" }, stringify(op)]
+}
+const letterPayload = (letter) => {
+  return [{ charType: "LEXOGRAPHIC", actionType: "INPUT" }, stringify(letter)];
+}
+const punctuationPayload = punctuation => {
+  return [{charInput: "PUNCTUATION", actionType: "INPUT" }, stringify(punctuation)];
+};
+const directivePayload = directive => {
+  return [{ actionType: "DIRECTIVE" }, stringify(directive)];
+};
+
 export default function (inputKey) {
   switch (inputKey) {
-
+    //////////////////////////////
     // NUMBERS
+    //////////////////////////////
     case KeyCode.KEY_0:
-      return [{charInput: "NUMERIC"}, "0"];
+      return numberPayload(0);
     case KeyCode.KEY_1:
-      return [{charInput: "NUMERIC"}, "1"];
+      return numberPayload(1);
     case KeyCode.KEY_2:
-      return [{charInput: "NUMERIC"}, "2"];
+      return numberPayload(2);
     case KeyCode.KEY_3:
-      return [{charInput: "NUMERIC"}, "3"];
+      return numberPayload(3);
     case KeyCode.KEY_4:
-      return [{charInput: "NUMERIC"}, "4"];
+      return numberPayload(4);
     case KeyCode.KEY_5:
-      return [{charInput: "NUMERIC"}, "5"];
+      return numberPayload(5);
     case KeyCode.KEY_6:
-      return [{charInput: "NUMERIC"}, "6"];
+      return numberPayload(6);
     case KeyCode.KEY_7:
-      return [{charInput: "NUMERIC"}, "7"];
+      return numberPayload(7);
     case KeyCode.KEY_8:
-      return [{charInput: "NUMERIC"}, "8"];
+      return numberPayload(8);
     case KeyCode.KEY_9:
-      return [{charInput: "NUMERIC"}, "9"];
-
-    case KeyCode.KEY_EQUALS:
-      return [{charInput: "NUMERIC"}, "="];
+      return numberPayload(9);
+    case KeyCode.KEY_NUMPAD0:
+      return numberPayload(0);
+    case KeyCode.KEY_NUMPAD1:
+      return numberPayload(1);
+    case KeyCode.KEY_NUMPAD2:
+      return numberPayload(2);
+    case KeyCode.KEY_NUMPAD3:
+      return numberPayload(3);
+    case KeyCode.KEY_NUMPAD4:
+      return numberPayload(4);
+    case KeyCode.KEY_NUMPAD5:
+      return numberPayload(5);
+    case KeyCode.KEY_NUMPAD6:
+      return numberPayload(6);
+    case KeyCode.KEY_NUMPAD7:
+      return numberPayload(7);
+    case KeyCode.KEY_NUMPAD8:
+      return numberPayload(8);
+    case KeyCode.KEY_NUMPAD9:
+      return numberPayload(9);
+    //////////////////////////////
+    // MATH OPERATIONS
+    //////////////////////////////
+    case KeyCode.KEY_ADD:
+      return mathPayload("+");
     case KeyCode.KEY_SUBTRACT:
-      return [{charInput: "NUMERIC"}, "-"];
-
+      return mathPayload("-");
+    case KeyCode.KEY_MULTIPLY:
+      return mathPayload("*");
+    case KeyCode.KEY_DIVIDE:
+      return mathPayload("/");
+    case KeyCode.KEY_EQUALS:
+      return mathPayload("=");
+    case KeyCode.KEY_SEPARATOR:
+      return mathPayload("+");
+    //////////////////////////////
     // LETTERS
+    //////////////////////////////
     case KeyCode.KEY_A:
-      return [{charInput:"LEXOGRAPHIC"}, "a"];
+      return letterPayload("a");
     case KeyCode.KEY_B:
-      return [{charInput:"LEXOGRAPHIC"}, "b"];
+      return letterPayload("b");
     case KeyCode.KEY_C:
-      return [{charInput:"LEXOGRAPHIC"}, "c"];
+      return letterPayload("c");
     case KeyCode.KEY_D:
-      return [{charInput:"LEXOGRAPHIC"}, "d"];
+      return letterPayload("d");
     case KeyCode.KEY_E:
-      return [{charInput:"LEXOGRAPHIC"}, "e"];
+      return letterPayload("e");
     case KeyCode.KEY_F:
-      return [{charInput:"LEXOGRAPHIC"}, "f"];
+      return letterPayload("f");
     case KeyCode.KEY_G:
-      return [{charInput:"LEXOGRAPHIC"}, "g"];
+      return letterPayload("g");
     case KeyCode.KEY_H:
-      return [{charInput:"LEXOGRAPHIC"}, "h"];
+      return letterPayload("h");
     case KeyCode.KEY_I:
-      return [{charInput:"LEXOGRAPHIC"}, "i"];
+      return letterPayload("i");
     case KeyCode.KEY_J:
-      return [{charInput:"LEXOGRAPHIC"}, "j"];
+      return letterPayload("j");
     case KeyCode.KEY_K:
-      return [{charInput:"LEXOGRAPHIC"}, "k"];
+      return letterPayload("k");
     case KeyCode.KEY_L:
-      return [{charInput:"LEXOGRAPHIC"}, "l"];
+      return letterPayload("l");
     case KeyCode.KEY_M:
-      return [{charInput:"LEXOGRAPHIC"}, "m"];
+      return letterPayload("m");
     case KeyCode.KEY_N:
-      return [{charInput:"LEXOGRAPHIC"}, "n"];
+      return letterPayload("n");
     case KeyCode.KEY_O:
-      return [{charInput:"LEXOGRAPHIC"}, "o"];
+      return letterPayload("o");
     case KeyCode.KEY_P:
-      return [{charInput:"LEXOGRAPHIC"}, "p"];
+      return letterPayload("p");
     case KeyCode.KEY_Q:
-      return [{charInput:"LEXOGRAPHIC"}, "q"];
+      return letterPayload("q");
     case KeyCode.KEY_R:
-      return [{charInput:"LEXOGRAPHIC"}, "r"];
+      return letterPayload("r");
     case KeyCode.KEY_S:
-      return [{charInput:"LEXOGRAPHIC"}, "s"];
+      return letterPayload("s");
     case KeyCode.KEY_T:
-      return [{charInput:"LEXOGRAPHIC"}, "t"];
+      return letterPayload("t");
     case KeyCode.KEY_U:
-      return [{charInput:"LEXOGRAPHIC"}, "u"];
+      return letterPayload("u");
     case KeyCode.KEY_V:
-      return [{charInput:"LEXOGRAPHIC"}, "v"];
+      return letterPayload("v");
     case KeyCode.KEY_W:
-      return [{charInput:"LEXOGRAPHIC"}, "w"];
+      return letterPayload("w");
     case KeyCode.KEY_X:
-      return [{charInput:"LEXOGRAPHIC"}, "x"];
+      return letterPayload("x");
     case KeyCode.KEY_Y:
-      return [{charInput:"LEXOGRAPHIC"}, "y"];
+      return letterPayload("y");
     case KeyCode.KEY_Z:
-      return [{charInput:"LEXOGRAPHIC"}, "z"];
-
+      return letterPayload("z");
+    //////////////////////////////
+    // PUNCTUATION
+    //////////////////////////////
     case KeyCode.KEY_SEMICOLON:
-      return [{ charInput: "PUNCTUATION" }, ";"];
-
+      return punctuationPayload(";");
+    case KeyCode.KEY_COMMA:
+      return punctuationPayload(",");
+    case KeyCode.KEY_PERIOD:
+      return punctuationPayload(".");
+    case KeyCode.KEY_SLASH:
+      return punctuationPayload("/");
+    case KeyCode.KEY_BACK_QUOTE:
+      return punctuationPayload("`");
+    case KeyCode.KEY_OPEN_BRACKET:
+      return punctuationPayload("[");
+    case KeyCode.KEY_BACK_SLASH:
+      return punctuationPayload("\\");
+    case KeyCode.KEY_CLOSE_BRACKET:
+      return punctuationPayload("]");
+    case KeyCode.KEY_QUOTE:
+      return punctuationPayload('"');
+    case KeyCode.KEY_META:
+      return punctuationPayload("|");
+    //////////////////////////////
+    // Directive
+    //////////////////////////////
     case KeyCode.KEY_RETURN:
-      return [[
-         {charInput: "PUNCTUATION" },
-         {actionType: "DIRECTIVE" }
-        ], "\n"];
+      return directivePayload("return");
     case KeyCode.KEY_ENTER:
-      return [[
-         {charInput: "PUNCTUATION" },
-         {actionType: "DIRECTIVE" }
-        ], "\n"];
-
-    // case KEY_CANCEL:
-    //   return ["DIRECTIVE", ""];
-    // case KEY_HELP:
-    //   return ["DIRECTIVE", ""];
-    // case KEY_BACK_SPACE:
-    //   return ["DIRECTIVE", ""];
-    // case KEY_TAB:
-    //   return ["DIRECTIVE", ""];
-    // case KEY_CLEAR:
-    //   return ["DIRECTIVE", ""];
-
-
-    // case KEY_SHIFT:
-    //   return ["DIRECTIVE", ""];
-    // case KEY_CONTROL:
-    //   return ["DIRECTIVE", ""];
-    // case KEY_ALT:
-    //   return ["DIRECTIVE", ""];
-    // case KEY_PAUSE:
-    //   return ["DIRECTIVE", ""];
-    // case Lock:
-    //   return ["DIRECTIVE", ""];
-    // case KEY_ESCAPE:
-    //   return ["DIRECTIVE", ""];
-    // case KEY_SPACE:
-    //   return ["DIRECTIVE", ""];
-    // case up:
-    //   return ["DIRECTIVE", ""];
-    // case down:
-    //   return ["DIRECTIVE", ""];
-    // case KEY_END:
-    //   return ["DIRECTIVE", ""];
-    // case KEY_HOME:
-    //   return ["DIRECTIVE", ""];
-    // case KEY_LEFT:
-    //   return ["DIRECTIVE", ""];
-    // case KEY_UP:
-    //   return ["DIRECTIVE", ""];
-    // case KEY_RIGHT:
-    //   return ["DIRECTIVE", ""];
-    // case KEY_DOWN:
-    //   return ["DIRECTIVE", ""];
-    // case Screen:
-    //   return ["DIRECTIVE", ""];
-    // case KEY_INSERT:
-    //   return ["DIRECTIVE", ""];
-    // case KEY_DELETE:
-    //   return ["DIRECTIVE", ""];
-
+      return directivePayload("enter");
+    case KeyCode.KEY_LEFT:
+      return directivePayload("left");
+    case KeyCode.KEY_RIGHT:
+      return directivePayload("right");
+    case KeyCode.KEY_UP:
+      return directivePayload("up");
+    case KeyCode.KEY_DOWN:
+      return directivePayload("down");
+    case KeyCode.KEY_CANCEL:
+      return directivePayload("cancel");
+    case KeyCode.KEY_HELP:
+      return directivePayload("help");
+    case KeyCode.KEY_BACK_SPACE:
+      return directivePayload("backspace");
+    case KeyCode.KEY_TAB:
+      return directivePayload("tab");
+    case KeyCode.KEY_CLEAR:
+      return directivePayload("clear");
+    case KeyCode.KEY_SHIFT:
+      return directivePayload("shift");
+    case KeyCode.KEY_CONTROL:
+      return directivePayload("ctrl");
+    case KeyCode.KEY_ALT:
+      return directivePayload("alt");
+    case KeyCode.KEY_PAUSE:
+      return directivePayload("pause");
+    case KeyCode.KEY_NUM_LOCK:
+      return directivePayload("numlock");
+    case KeyCode.KEY_SCROLL_LOCK:
+      return directivePayload("scrolllock");
+    case KeyCode.KEY_CAPS_LOCK:
+      return directivePayload("capslock");
+    case KeyCode.KEY_ESCAPE:
+      return directivePayload("esc");
+    case KeyCode.KEY_SPACE:
+      return directivePayload("space");
+    case KeyCode.KEY_END:
+      return directivePayload("end");
+    case KeyCode.KEY_HOME:
+      return directivePayload("home");
+    case KeyCode.KEY_PRINTSCREEN:
+      return directivePayload("printscreen");
+    case KeyCode.KEY_INSERT:
+      return directivePayload("insert");
+    case KeyCode.KEY_DELETE:
+      return directivePayload("delete");
+    case KeyCode.KEY_LEFT_CMD:
+      return directivePayload("leftcmd");
+    case KeyCode.KEY_RIGHT_CMD:
+      return directivePayload("rightcmd");
+    case KeyCode.KEY_CONTEXT_MENU:
+      return directivePayload("ctxmenu");
     default:
       break;
   }
