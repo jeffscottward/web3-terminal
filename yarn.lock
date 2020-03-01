@@ -6680,6 +6680,11 @@ jsx-ast-utils@^2.2.1, jsx-ast-utils@^2.2.3:
     array-includes "^3.0.3"
     object.assign "^4.1.0"
 
+keycode-js@^2.0.3:
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/keycode-js/-/keycode-js-2.0.3.tgz#0ef559be057847aae6c520ce03577f4a12f7e257"
+  integrity sha512-nGuOQ0zvYQFr0OOBOZS47e/ifsiuNz1pleQIFS+LX+udj3St6AvHpv55MI8DCre6Yg9D2CG/qqWbuAx7iQt9FQ==
+
 keyv@3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/keyv/-/keyv-3.0.0.tgz#44923ba39e68b12a7cec7df6c3268c031f2ef373"
@@ -11043,6 +11048,21 @@ xtend@^4.0.0, xtend@~4.0.1:
   resolved "https://registry.yarnpkg.com/xtend/-/xtend-4.0.2.tgz#bb72779f5fa465186b1f438f674fa347fdb5db54"
   integrity sha512-LKYU1iAXJXUgAXn9URjiu+MWhyUXHsvfp7mcuYm9dSUKK0/CjtrUwFAxD82/mCWbtLsGjFIad0wIsod4zrTAEQ==
 
+xterm-addon-fit@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/xterm-addon-fit/-/xterm-addon-fit-0.3.0.tgz#341710741027de9d648a9f84415a01ddfdbbe715"
+  integrity sha512-kvkiqHVrnMXgyCH9Xn0BOBJ7XaWC/4BgpSWQy3SueqximgW630t/QOankgqkvk11iTOCwWdAY9DTyQBXUMN3lw==
+
+xterm-addon-search@^0.5.0:
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/xterm-addon-search/-/xterm-addon-search-0.5.0.tgz#cd3a2f8056084c28e236d4e732da37682010bcc2"
+  integrity sha512-zLVqVTrg5w2nk9fRj3UuVKCPo/dmFe/cLf3EM9Is5Dm6cgOoXmeo9eq2KgD8A0gquAflTFTf0ya2NaFmShHwyg==
+
+xterm-addon-web-links@^0.2.1:
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/xterm-addon-web-links/-/xterm-addon-web-links-0.2.1.tgz#6d1f2ce613e09870badf17615e7a1170a31542b2"
+  integrity sha512-2KnHtiq0IG7hfwv3jw2/jQeH1RBk2d5CH4zvgwQe00rLofSJqSfgnJ7gwowxxpGHrpbPr6Lv4AmH/joaNw2+HQ==
+
 xterm@3.1.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/xterm/-/xterm-3.1.0.tgz#7f7e1c8cf4b80bd881a4e8891213b851423e90c9"
@@ -11052,6 +11072,11 @@ xterm@3.12.2:
   version "3.12.2"
   resolved "https://registry.yarnpkg.com/xterm/-/xterm-3.12.2.tgz#ec8563857c7b098973bab4dbf537f1a7c6a790c8"
   integrity sha512-FSXovDdsqIKqoayC6+zFzhaHi+A3NSceM5rgTW88DH7sS96HdwMToB2p1rW+FyNsSqfAgFwlXDRQk+fh/aHvPQ==
+
+xterm@^4.4.0:
+  version "4.4.0"
+  resolved "https://registry.yarnpkg.com/xterm/-/xterm-4.4.0.tgz#5915d3c4c8800fadbcf555a0a603c672ab9df589"
+  integrity sha512-JGIpigWM3EBWvnS3rtBuefkiToIILSK1HYMXy4BCsUpO+O4UeeV+/U1AdAXgCB6qJrnPNb7yLgBsVCQUNMteig==
 
 "y18n@^3.2.1 || ^4.0.0", y18n@^4.0.0:
   version "4.0.0"
